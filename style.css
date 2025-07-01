@@ -1,1 +1,109 @@
+:root {
 
+    --font-main: 'Comic Sans MS', cursive, sans-serif;
+    --amber: #ffbe0bff;
+    --orange-pantone: #fb5607ff;
+    --rose: #ff006eff;
+    --blue-violet: #8338ecff;
+    --azure: #3a86ffff;
+
+}
+
+header {
+    background: #8338ecff;
+    color: white;
+    padding: 12px 0 8px 0;
+    border-bottom: 2px solid #ff006eff;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    margin: 0.5em 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: #ffbe0bff;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+buttonstart {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+}
+
+buttona {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+}
+
+buttonb {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+}
+
+buttonc {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;    
+}
+
+buttond {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;    
+}
+
+buttonnext {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+}
+
+buttonagain {
+        background-color: #3a86ffff; /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;    
+}
+
+footer {
+    background: #8338ecff;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    font-size: 0.80em;
+    border-top: 2px solid #ff006eff;
+    margin-top: 2px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
