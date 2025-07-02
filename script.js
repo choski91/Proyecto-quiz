@@ -7,7 +7,7 @@ document.getElementById('playAgain').addEventListener('click', function() {
 //Ufuncionalidad-botones/home
 //Evento botón start
 document.getElementById("start-button").addEventListener("click", (event) => {
-    window.location.href = "../pages/question.html";
+    window.location.href = "./pages/question.html";
 })
 
 //boton de siguiente en html/question

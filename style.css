@@ -110,6 +110,19 @@ body {
         margin-bottom: 5px;
 }
 
+#next {
+        background-color: var(--rose); /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;
+}
+
 
 footer {
     background: var(--blue-violet);
@@ -119,7 +132,7 @@ footer {
     font-size: 0.80em;
     border-top: 2px solid var(--rose);
     margin-top: 2px;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
