@@ -1,3 +1,4 @@
+
 //Ufuncionalidad-botones/home
 //Evento botón start
 const startButton = document.getElementById("start-button");
@@ -55,12 +56,11 @@ getData().then(data => {
   console.log(data);
   
   data.map(preguntas => {
-    const pregunta = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
-    console.log(pregunta)
+    const pregunta = preguntas.question.toString();
+    const respuesta = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
+    console.log(pregunta, respuesta);
   })
 })
-
-
 
 
 
