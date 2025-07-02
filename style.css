@@ -10,79 +10,104 @@
 }
 
 header {
-    background: #8338ecff;
+    background: var(--blue-violet);
     color: white;
     padding: 12px 0 8px 0;
-    border-bottom: 2px solid #ff006eff;
+    border-bottom: 2px solid var(--rose);
     text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: white;
     margin: 0.5em 0;
+    text-align: center;
 }
 
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: #ffbe0bff;
+    background: var(--amber);
     color: black;
     margin: 0;
     padding: 0;
 }
 
-buttonstart {
-        background-color: #3a86ffff; /* Color de fondo */
+#start-button {
+        background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
         height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;
 }
 
-buttona {
-        background-color: #3a86ffff; /* Color de fondo */
+#option-a {
+        background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
         height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;
 }
 
-buttonb {
-        background-color: #3a86ffff; /* Color de fondo */
+#option-b {
+        background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
         height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;
 }
 
-buttonc {
-        background-color: #3a86ffff; /* Color de fondo */
+#option-c {
+        background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
-        height: 50px;    
+        height: 50px;  
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;  
 }
 
-buttond {
-        background-color: #3a86ffff; /* Color de fondo */
-        border-radius: 20px; /* Curva en la esquina de los botones */
-        text-transform: uppercase; /* Mayusculas */
-        color:  white; /* Color del texto */
-        width: 200px;
-        height: 50px;    
-}
-
-buttonnext {
-        background-color: #3a86ffff; /* Color de fondo */
+#option-d {
+        background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
         height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;    
+}
+
+#playAgain {
+        background-color: var(--azure); /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;
 }
 
 buttonagain {
@@ -95,12 +120,12 @@ buttonagain {
 } 
 
 footer {
-    background: #8338ecff;
+    background: var(--blue-violet);
     color: white;
     text-align: center;
     padding: 1px 0;
     font-size: 0.80em;
-    border-top: 2px solid #ff006eff;
+    border-top: 2px solid var(--rose);
     margin-top: 2px;
     position: fixed;
     left: 0;
