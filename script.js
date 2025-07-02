@@ -1,3 +1,4 @@
+
 //Ufuncionalidad-botones/home
 //Evento botón start
 const startButton = document.getElementById("start-button");
@@ -25,7 +26,7 @@ if (playAgain){
 /***************** obtencion de datos ***************/
 async function getData() {
     try{
-        const res = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
+        const res = await fetch('https://opentdb.com/api.php?amount=10');
 
         if (!res.ok) {
         if (res.status === 404) {
@@ -55,9 +56,8 @@ getData().then(data => {
   console.log(data);
   
   data.map(preguntas => {
-    const pregunta = preguntas.question;
-    const respuestas = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
-    console.log(pregunta, respuestas)
+    const pregunta = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
+    console.log(pregunta)
   })
 })
 
