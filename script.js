@@ -1,4 +1,3 @@
-
 //Ufuncionalidad-botones/home
 //Evento botón start
 const startButton = document.getElementById("start-button");
