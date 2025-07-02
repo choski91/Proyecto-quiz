@@ -55,8 +55,9 @@ getData().then(data => {
   console.log(data);
   
   data.map(preguntas => {
-    const pregunta = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
-    console.log(pregunta)
+    const pregunta = preguntas.question;
+    const respuestas = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
+    console.log(pregunta, respuestas)
   })
 })
 
