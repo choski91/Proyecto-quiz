@@ -119,7 +119,7 @@ footer {
     font-size: 0.80em;
     border-top: 2px solid var(--rose);
     margin-top: 2px;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
