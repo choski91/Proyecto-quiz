@@ -23,6 +23,45 @@ if (playAgain) {
         window.location.href = './question.html';
     })
 }
+
+//funcion grafica
+function paintGraph(data = []) {
+    if (!data || data.length === 0) {
+        document.querySelector(".result").innerHTML = "<p>No hay datos disponibles aún.</p>";
+        return;
+    }
+
+    let date = [];
+    let score = [];
+
+    for (let items of data) {
+        date.push(items.date.toLocaleString("es-ES"));
+        score.push(items.score);
+    }
+
+    let data2 = {
+        labels: date,
+        series: [score],
+    };
+
+    let asisY = {
+        onlyInteger: true
+
+    }
+
+    var options = {
+        fullWidth: true,
+        chartPadding: {
+            right: 40
+        }
+    };
+
+    new Chartist.Line(".result", data2, asisY, options);
+
+}
+
+paintGraph();
+
 /***************** obtencion de datos ***************/
 async function getData() {
     try {
