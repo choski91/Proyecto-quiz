@@ -59,8 +59,36 @@ getData().then(data => {
     const pregunta = preguntas.question.toString();
     const respuesta = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
     console.log(pregunta, respuesta);
+    let randomR = respuesta 
+        randomR.sort(() => Math.random() - 0,5);
+        console.log(randomR);
   })
 })
 
+//Contador 1 al 10 de preguntas, no se si esta bien :p
 
+let totalPreguntas = 10;
+let preguntaActual = 1;
+let respuestasCorrectas = 0;
 
+function responder(esCorrecta) {
+  if (esCorrecta) {
+    respuestasCorrectas++;
+  }
+
+  if (preguntaActual < totalPreguntas) {
+    preguntaActual++;
+    actualizarContador();
+  } else {
+    // Guardar puntaje en local, supuestamente 
+    localStorage.setItem("puntajeFinal", `${respuestasCorrectas}/${totalPreguntas}`);
+    window.location.href = "resultado.html"; //redirige a resultados.html
+  }
+}
+
+function actualizarContador() {
+  document.getElementById("question-counter").textContent =
+    `Pregunta ${preguntaActual} de ${totalPreguntas}`;
+;
+}
+actualizarContador();// Iniciar
