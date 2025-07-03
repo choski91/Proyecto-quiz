@@ -1,0 +1,125 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Sports",
+      "question": "In golf, what name is given to a hole score of two under par?",
+      "correct_answer": "Eagle",
+      "incorrect_answers": [
+        "Birdie",
+        "Bogey",
+        "Albatross"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "What was the aim of the &quot;Umbrella Revolution&quot; in Hong Kong in 2014?",
+      "correct_answer": "Genuine universal suffrage",
+      "incorrect_answers": [
+        "Gaining Independence",
+        "Go back under British Rule",
+        "Lower taxes"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "In the game Danganronpa: Happy Trigger Havoc, the character Aoi Asahina&#039;s ultimate ability is what?",
+      "correct_answer": "Ultimate Swimmer",
+      "incorrect_answers": [
+        "Ultimate Detective",
+        "Ultimate Gambler",
+        "Ultimate Dancer"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Cartoon &amp; Animations",
+      "question": "What was the name of Jonny&#039;s pet dog in The Adventures of Jonny Quest?",
+      "correct_answer": "Bandit",
+      "incorrect_answers": [
+        "Lucky",
+        "Rocky",
+        "Max"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which popular rock band has a one-armed drummer?",
+      "correct_answer": "Def Leppard",
+      "incorrect_answers": [
+        "The Beatles",
+        "Lynyrd Skynyrd",
+        "Foreigner"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "General Knowledge",
+      "question": "Which of the following is NOT one of Aesop&#039;s fables?",
+      "correct_answer": "The Fox and the Hound",
+      "incorrect_answers": [
+        "The Fox and the Grapes",
+        "The Tortoise and the Hare",
+        "The Frog and the Ox"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "Prior to his appearance in Super Smash Bros. Ultimate, What was King K. Rool&#039;s last appearance in any game?",
+      "correct_answer": "Mario Super Sluggers",
+      "incorrect_answers": [
+        "Donkey Kong 64",
+        "Donkey Kong Country 3",
+        "Donkey Kong: King Of Swing"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "How many total monsters appear in Monster Hunter Generations?",
+      "correct_answer": "105",
+      "incorrect_answers": [
+        "100",
+        "98",
+        "73"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Sports",
+      "question": "Who won the 2018 Monaco Grand Prix?",
+      "correct_answer": "Daniel Ricciardo",
+      "incorrect_answers": [
+        "Sebastian Vettel",
+        "Kimi Raikkonen",
+        "Lewis Hamilton"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Just Cause 2 was mainly set in what fictional Southeast Asian island country?",
+      "correct_answer": "Panau",
+      "incorrect_answers": [
+        "Davao",
+        "Macau",
+        "Palau"
+      ]
+    }
+  ]
+}
