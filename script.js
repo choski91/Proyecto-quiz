@@ -65,7 +65,7 @@ async function getData() {
       console.error("Hubo un problema:", error.message);
     }
 }
-
+}
 /******************* Manipulacion de datos  ****************/
 function manipuDatos (dataset) {
   
