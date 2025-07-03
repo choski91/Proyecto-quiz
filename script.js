@@ -90,6 +90,7 @@ async function getData() {
     }
 }
 getData().then(data => {
+
     /******************* Manipulacion de datos  ****************/
 
     console.log(data);
@@ -99,7 +100,33 @@ getData().then(data => {
         const respuesta = [preguntas.correct_answer, preguntas.incorrect_answers[0], preguntas.incorrect_answers[1], preguntas.incorrect_answers[2]];
         console.log(pregunta, respuesta);
     })
+
 })
 
+//Contador 1 al 10 de preguntas, no se si esta bien :p
 
+let totalPreguntas = 10;
+let preguntaActual = 1;
+let respuestasCorrectas = 0;
 
+function responder(esCorrecta) {
+  if (esCorrecta) {
+    respuestasCorrectas++;
+  }
+
+  if (preguntaActual < totalPreguntas) {
+    preguntaActual++;
+    actualizarContador();
+  } else {
+    // Guardar puntaje en local, supuestamente 
+    localStorage.setItem("puntajeFinal", `${respuestasCorrectas}/${totalPreguntas}`);
+    window.location.href = "resultado.html"; //redirige a resultados.html
+  }
+}
+
+function actualizarContador() {
+  document.getElementById("question-counter").textContent =
+    `Pregunta ${preguntaActual} de ${totalPreguntas}`;
+;
+}
+actualizarContador();// Iniciar
