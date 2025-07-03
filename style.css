@@ -6,6 +6,16 @@
     --rose: #ff006eff;
     --blue-violet: #8338ecff;
     --azure: #3a86ffff;
+    --prussian-blue: #003049ff;
+    --fire-engine-red: #d62828ff;
+    --orange-wheel: #f77f00ff;
+    --xanthous: #fcbf49ff;
+    --vanilla: #eae2b7ff;
+    --amethyst: #9b5de5ff;
+    --brilliant-rose: #f15bb5ff;
+    --maize: #fee440ff;
+    --deep-sky-blue: #00bbf9ff;
+    --aquamarine: #00f5d4ff;
 
 }
 
@@ -15,8 +25,8 @@ header {
     padding: 12px 0 8px 0;
     border-bottom: 2px solid var(--rose);
     text-align: center;
-}
 
+}
 h1, h2, h3 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: white;
@@ -33,6 +43,22 @@ body {
 }
 
 #start-button {
+        background-color: var(--rose); /* Color de fondo */
+        border-radius: 20px; /* Curva en la esquina de los botones */
+        text-transform: uppercase; /* Mayusculas */
+        color:  white; /* Color del texto */
+        width: 200px;
+        height: 50px;
+        margin-left: 50%; 
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-bottom: 5px;
+        transition-duration: 0.4s;
+}
+#start-button:hover {background-color: var(--azure); /* Green */
+        color: white;
+}
+/*opton-a {
         background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
@@ -43,20 +69,11 @@ body {
         transform: translateX(-50%);
         margin-top: 5px;
         margin-bottom: 5px;
+        transition-duration: 0.4s;
 }
-
-#option-a {
-        background-color: var(--azure); /* Color de fondo */
-        border-radius: 20px; /* Curva en la esquina de los botones */
-        text-transform: uppercase; /* Mayusculas */
-        color:  white; /* Color del texto */
-        width: 200px;
-        height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;
-}
+#option-a:hover {background-color: var(--maize); /* Green */
+        color: white;
+}        
 
 #option-b {
         background-color: var(--azure); /* Color de fondo */
@@ -69,8 +86,11 @@ body {
         transform: translateX(-50%);
         margin-top: 5px;
         margin-bottom: 5px;
+        transition-duration: 0.4s;
 }
-
+#option-b:hover {background-color: var(--aquamarine); /* Green */
+        color: white;
+}
 #option-c {
         background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
@@ -81,9 +101,12 @@ body {
         margin-left: 50%;
         transform: translateX(-50%);
         margin-top: 5px;
-        margin-bottom: 5px;  
+        margin-bottom: 5px;
+        transition-duration: 0.4s;  
 }
-
+#option-c:hover {background-color: var(--brilliant-rose); /* Green */
+        color: white;
+}
 #option-d {
         background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
@@ -94,9 +117,10 @@ body {
         margin-left: 50%;
         transform: translateX(-50%);
         margin-top: 5px;
-        margin-bottom: 5px;    
+        margin-bottom: 5px;
+        transition-duration: 0.4s;   
 }
-
+ */
 .option {
         background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
@@ -107,30 +131,60 @@ body {
         margin-left: 50%;
         transform: translateX(-50%);
         margin-top: 5px;
-        margin-bottom: 5px;    
+        margin-bottom: 5px;   
+        transition-duration: 0.4s; 
+}
+
+.option:hover {background-color: var(--brilliant-rose); /* Green */
+        color: white;
 }
 
 #playAgain {
         background-color: var(--azure); /* Color de fondo */
         border-radius: 20px; /* Curva en la esquina de los botones */
+  
+#option-d:hover {background-color: var(--fire-engine-red); /* Green */
+        color: white;
+}
+#next {
+        background-color: var(--rose); /* Color de fondo */
+        border-radius: 50px; /* Curva en la esquina de los botones */
+
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
         height: 50px;
         margin-left: 50%;
         transform: translateX(-50%);
-        margin-top: 5px;
+        margin-top: 0px;
         margin-bottom: 5px;
+        transition-duration: 0.4s;
+}
+#next:hover {background-color: var(--prussian-blue); /* Green */
+        color: white;
 }
 
-buttonagain {
-        background-color: #3a86ffff; /* Color de fondo */
-        border-radius: 20px; /* Curva en la esquina de los botones */
+#playAgain {background-color: var(--rose); /* Color de fondo */
+        border-radius: 50px; /* Curva en la esquina de los botones */
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
-        height: 50px;    
-} 
+        height: 50px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0px;
+        margin-bottom: 5px;
+        transition-duration: 0.4s;
+}
+#playAgain:hover {background-color: var(--prussian-blue); /* Green */
+        color: white;
+}
+
+#question-counter {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
 
 footer {
     background: var(--blue-violet);
@@ -144,4 +198,142 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+@media screen and (max-width: 2000px) {
+    header {
+        font-size: 3.5rem;
+        padding: 10px 0;
+    }
+
+    h1, h2, h3 {
+        font-size: 2.5rem;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+
+    #start-button  {
+        font-size: 1.8rem;
+        width: 300px;
+        height: 70px;
+    }
+    #option-a {
+        font-size: 1.8rem;
+        width: 300px;
+        height: 70px;
+    }
+    #option-b {
+        font-size: 1.8rem;
+        width: 300px;
+        height: 70px;
+    }
+    #option-c {
+        font-size: 1.8rem;
+        width: 300px;
+        height: 70px;
+    }
+    #option-d {
+        font-size: 1.8rem;
+        width: 300px;
+        height: 70px;
+    }
+    #next {
+        font-size: 1.8rem;
+        width: 300px;
+        height: 70px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        font-size: 2.5rem;
+        padding: 10px 0;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.8rem;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+
+    #start-button  {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 60px;
+    }
+    #option-a {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 60px;
+    }
+    #option-b {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 60px;    
+    }
+    #option-c {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 60px;
+    }
+    #option-d {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 60px;
+    }
+        #next {
+        font-size: 1.2rem;
+        width: 250px;
+        height: 60px;
+    }
+}
+@media screen and (max-width: 320px) {
+    header {
+        font-size: 1.8rem;
+        padding: 10px 0;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.3rem;
+    }
+    
+    body {
+        padding-bottom: 60px;
+    }
+
+    #start-button  {
+        font-size: 1.0rem;
+        width: 200px;
+        height: 50px;
+    }
+    #option-a {
+        font-size: 1.0rem;
+        width: 200px;
+        height: 50px;
+    }
+    #option-b {
+        font-size: 1.0rem;
+        width: 200px;
+        height: 50px;
+    }
+    #option-c {
+        font-size: 1.0rem;
+        width: 200px;
+        height: 50px;
+    }
+    #option-d {
+        font-size: 1.0rem;
+        width: 200px;
+        height: 50px;
+    }
+    #next {
+        font-size: 1.0rem;
+        width: 200px;
+        height: 50px;
+    }
 }
