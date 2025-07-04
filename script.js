@@ -1,7 +1,8 @@
 /************** Variables globales **************/
 let pos_pregunta = 0;
 let preguntas = [];
-let resultados = [];
+let resultadosGuardados = JSON.parse(localStorage.getItem('resultadosQuiz')) || [];
+let resultado = {};
 
 //funcionalidad-botones/home
 //Evento botón start
@@ -14,11 +15,11 @@ if (startButton) {
 
 //boton de siguiente en html/question
 const buttonNext = document.getElementById("next");
-if (buttonNext) {
-    buttonNext.addEventListener("click", (event) => {
-        window.location.href = "../pages/results.html";
-    })
-}
+// if (buttonNext) {
+//     buttonNext.addEventListener("click", (event) => {
+//         window.location.href = "../pages/results.html";
+//     })
+// }
 
  /************** Botón jugar otra vez *************/
 const playAgain = document.getElementById('playAgain');
@@ -33,6 +34,11 @@ const firstquest = document.getElementById('opciones-rta');
 if (firstquest) {
 getData().then(datos => {
   preguntas = datos;
+  pos_pregunta = 0;
+  resultado = {
+    date: new Date(),
+    score: 0
+  };
   renderPregunta(pos_pregunta, firstquest); // pos 0
 })
 }
@@ -85,29 +91,82 @@ function manipuDatos (dataset) {
 function renderPregunta(i, container) {
   console.log(preguntas);
   
-  container.innerHTML += `
+  container.innerHTML = `
   <h2>${preguntas[i].pregunta}</h2>
   <button class='option'>${preguntas[i].respuesta[0]}</button>
   <button class='option'>${preguntas[i].respuesta[1]}</button>
   <button class='option'>${preguntas[i].respuesta[2]}</button>
   <button class='option'>${preguntas[i].respuesta[3]}</button>
   `
-  //score += 1
+
+/******************** Validacion ******************/
+const options = container.querySelectorAll('.option');
+
+options.forEach(option => {
+  option.addEventListener('click', (event) => {
+    validacion(event.target.innerText)
+  })
+});
 }  
 
+function validacion(respuestaSeleccionada) {
+  const pregunta = preguntas[pos_pregunta];
+
+  const respuestaNormalizada = respuestaSeleccionada.trim().toLowerCase();
+  const correctaNormalizada = pregunta.correcta.trim().toLowerCase();
+
+  if(respuestaNormalizada == correctaNormalizada) {
+    resultado.score += 1;
+    console.log('¡Correcto!');
+    firstquest.innerHTML += `<h2>¡Correcto!</h2>`
+  } else {
+    console.log('Incorrecto haber estudíao');
+    firstquest.innerHTML += `<h2>¡Incorrecto haber estudíao!</h2>`
+  }
+  pos_pregunta += 1;
+
+  if (buttonNext)
+    buttonNext.addEventListener('click', () => {
+      if(pos_pregunta < preguntas.length) {
+        renderPregunta(pos_pregunta, firstquest);
+      } else {
+          firstquest.innerHTML = `<h3>¿Quieres saber tu resultado?<h3>`
+          buttonNext.innerText = 'Ver resultado';
+          buttonNext.addEventListener("click", (event) => {
+          window.location.href = "../pages/results.html";
+    })
+        // buttonNext.style.display = 'block';
+/**************** Guardar resultados ********************/        
+        
+        resultadosGuardados.push(resultado);
+        localStorage.setItem('resultadosQuiz', JSON.stringify(resultadosGuardados));
+
+        resultado = {};
+    }
+  })
+
+  
+  
+}
+  
 /****************** Grafica ***********************/
 //funcion grafica
-function paintGraph(data = []) {
-    if (!data || data.length === 0) {
-        document.querySelector(".result").innerHTML = "<p>No hay datos disponibles aún.</p>";
+function paintGraph() {
+  const graphContainer = document.querySelector('.result');
+  const storedResults = JSON.parse(localStorage.getItem('resultadosQuiz'));
+
+    if (!storedResults || storedResults.length === 0) {
+      if(graphContainer){
+        graphContainer.innerHTML = "<p>No hay datos disponibles aún.</p>";
+      }
         return;
     }
 
     let date = [];
     let score = [];
 
-    for (let items of data) {
-        date.push(items.date.toLocaleString("es-ES"));
+    for (let items of storedResults) {
+        date.push(new Date(items.date).toLocaleDateString("es-ES") + ' ' + new Date(items.date).toLocaleTimeString('es-Es'));
         score.push(items.score);
     }
 
@@ -128,8 +187,12 @@ function paintGraph(data = []) {
         }
     };
 
-    new Chartist.Line(".result", data2, asisY, options);
-
+    if (graphContainer) {
+      new Chartist.Line(".result", data2, asisY, options);
+    } else {
+      console.log('No hay contenedor para la grafica')
+    }
+    
 }
 
 paintGraph();

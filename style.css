@@ -150,6 +150,7 @@ option-a {
         color: white;
 }
 #next {
+        /* display: none; */
         background-color: var(--rose); /* Color de fondo */
         border-radius: 50px; /* Curva en la esquina de los botones */
 
