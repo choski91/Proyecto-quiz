@@ -144,8 +144,6 @@ function validacion(respuestaSeleccionada) {
         resultado = {};
     }
   })
-
-  
   
 }
   

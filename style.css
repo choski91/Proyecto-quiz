@@ -27,7 +27,7 @@ header {
     text-align: center;
 
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     color: white;
     margin: 0.5em 0;
@@ -58,70 +58,6 @@ body {
 #start-button:hover {background-color: var(--azure); /* Green */
         color: white;
 }
-/* 
-option-a {
-        background-color: var(--azure);  Color de fondo 
-        border-radius: 20px;  Curva en la esquina de los botones 
-        text-transform: uppercase; Mayusculas 
-        color:  white;  Color del texto 
-        width: 200px;
-        height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;
-        transition-duration: 0.4s;
-}
-#option-a:hover {background-color: var(--maize);  Green 
-        color: white;
-}        
-
-#option-b {
-        background-color: var(--azure);  Color de fondo 
-        border-radius: 20px;  Curva en la esquina de los botones 
-        text-transform: uppercase;  Mayusculas 
-        color:  white;  Color del texto 
-        width: 200px;
-        height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;
-        transition-duration: 0.4s;
-}
-#option-b:hover {background-color: var(--aquamarine);  Green 
-        color: white;
-}
-#option-c {
-        background-color: var(--azure);  Color de fondo 
-        border-radius: 20px;  Curva en la esquina de los botones 
-        text-transform: uppercase;  Mayusculas 
-        color:  white;  Color del texto 
-        width: 200px;
-        height: 50px;  
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;
-        transition-duration: 0.4s;  
-}
-#option-c:hover {background-color: var(--brilliant-rose);  Green 
-        color: white;
-}
-#option-d {
-        background-color: var(--azure);  Color de fondo 
-        border-radius: 20px;  Curva en la esquina de los botones 
-        text-transform: uppercase;  Mayusculas 
-        color:  white;  Color del texto 
-        width: 200px;
-        height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;
-        transition-duration: 0.4s;   
-} 
-*/
 
 .option {
         background-color: var(--azure); /* Color de fondo */
@@ -141,19 +77,10 @@ option-a {
         color: white;
 }
 
-#playAgain {
-        background-color: var(--azure); /* Color de fondo */
-        border-radius: 20px; /* Curva en la esquina de los botones */
-}
-  
-#option-d:hover {background-color: var(--fire-engine-red); /* Green */
-        color: white;
-}
 #next {
         /* display: none; */
         background-color: var(--rose); /* Color de fondo */
         border-radius: 50px; /* Curva en la esquina de los botones */
-
         text-transform: uppercase; /* Mayusculas */
         color:  white; /* Color del texto */
         width: 200px;
@@ -164,6 +91,7 @@ option-a {
         margin-bottom: 5px;
         transition-duration: 0.4s;
 }
+
 #next:hover {background-color: var(--prussian-blue); /* Green */
         color: white;
 }
@@ -210,7 +138,7 @@ footer {
         padding: 10px 0;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         font-size: 2.5rem;
     }
     
@@ -223,26 +151,12 @@ footer {
         width: 300px;
         height: 70px;
     }
-    #option-a {
+    .option {
         font-size: 1.8rem;
         width: 300px;
         height: 70px;
     }
-    #option-b {
-        font-size: 1.8rem;
-        width: 300px;
-        height: 70px;
-    }
-    #option-c {
-        font-size: 1.8rem;
-        width: 300px;
-        height: 70px;
-    }
-    #option-d {
-        font-size: 1.8rem;
-        width: 300px;
-        height: 70px;
-    }
+
     #next {
         font-size: 1.8rem;
         width: 300px;
@@ -257,7 +171,7 @@ footer {
         padding: 10px 0;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         font-size: 1.8rem;
     }
     
@@ -270,26 +184,12 @@ footer {
         width: 250px;
         height: 60px;
     }
-    #option-a {
+    .option {
         font-size: 1.2rem;
         width: 250px;
         height: 60px;
     }
-    #option-b {
-        font-size: 1.2rem;
-        width: 250px;
-        height: 60px;    
-    }
-    #option-c {
-        font-size: 1.2rem;
-        width: 250px;
-        height: 60px;
-    }
-    #option-d {
-        font-size: 1.2rem;
-        width: 250px;
-        height: 60px;
-    }
+
         #next {
         font-size: 1.2rem;
         width: 250px;
@@ -302,7 +202,7 @@ footer {
         padding: 10px 0;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
         font-size: 1.3rem;
     }
     
@@ -315,26 +215,12 @@ footer {
         width: 200px;
         height: 50px;
     }
-    #option-a {
+    .option {
         font-size: 1.0rem;
         width: 200px;
         height: 50px;
     }
-    #option-b {
-        font-size: 1.0rem;
-        width: 200px;
-        height: 50px;
-    }
-    #option-c {
-        font-size: 1.0rem;
-        width: 200px;
-        height: 50px;
-    }
-    #option-d {
-        font-size: 1.0rem;
-        width: 200px;
-        height: 50px;
-    }
+
     #next {
         font-size: 1.0rem;
         width: 200px;
