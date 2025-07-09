@@ -127,98 +127,106 @@ function validacion(respuestaSeleccionada) {
 
   if (buttonNext)
     buttonNext.addEventListener('click', () => {
+
       if(pos_pregunta < preguntas.length) {
+          
+  let counterQuestions = document.getElementById("question-counter");
+  counterQuestions.innerHTML= `<h3>Pregunta ${pos_pregunta + 1 } de 10 </h3> `
+
         renderPregunta(pos_pregunta, firstquest);
       } else {
-          firstquest.innerHTML = `<h3>¿Quieres saber tu resultado?<h3>`
           buttonNext.innerText = 'Ver resultado';
           buttonNext.addEventListener("click", (event) => {
           window.location.href = "../pages/results.html";
+          
     })
         // buttonNext.style.display = 'block';
 /**************** Guardar resultados ********************/        
         
         resultadosGuardados.push(resultado);
         localStorage.setItem('resultadosQuiz', JSON.stringify(resultadosGuardados));
-
+        
         resultado = {};
     }
   })
   
 }
-  
-/****************** Grafica ***********************/
-//funcion grafica
-function paintGraph() {
-  const graphContainer = document.querySelector('.result');
-  const storedResults = JSON.parse(localStorage.getItem('resultadosQuiz'));
 
-    if (!storedResults || storedResults.length === 0) {
-      if(graphContainer){
-        graphContainer.innerHTML = "<p>No hay datos disponibles aún.</p>";
-      }
+/****************Mostrar resultados***************/
+function mostrarPuntuacionReciente(elementoDePuntuacion) {
+
+    if (!elementoDePuntuacion) {
+        console.error("Error: El elemento con ID 'result' no se encontró en el DOM para mostrar la puntuación.");
         return;
     }
 
-    let date = [];
-    let score = [];
-
-    for (let items of storedResults) {
-        date.push(new Date(items.date).toLocaleDateString("es-ES") + ' ' + new Date(items.date).toLocaleTimeString('es-Es'));
-        score.push(items.score);
-    }
-
-    let data2 = {
-        labels: date,
-        series: [score],
-    };
-
-    let asisY = {
-        onlyInteger: true
-
-    }
-
-    var options = {
-        fullWidth: true,
-        chartPadding: {
-            right: 40
-        }
-    };
-
-    if (graphContainer) {
-      new Chartist.Line(".result", data2, asisY, options);
-    } else {
-      console.log('No hay contenedor para la grafica')
-    }
+    const historial = JSON.parse(localStorage.getItem('resultadosQuiz')) || [];
+    console.log(historial);
     
-}
 
-paintGraph();
+    if (historial.length > 0) {
+        const ultimaPartida = historial[historial.length-20];
+        
   
-//Contador 1 al 10 de preguntas, no se si esta bien :p
+        const score = ultimaPartida.score || 0;
+    
 
-let totalPreguntas = 10;
-let preguntaActual = 1;
-let respuestasCorrectas = 0;
-
-function responder(esCorrecta) {
-  if (esCorrecta) {
-    respuestasCorrectas++;
-  }
-
-  if (preguntaActual < totalPreguntas) {
-    preguntaActual++;
-    actualizarContador();
-  } else {
-    // Guardar puntaje en local, supuestamente 
-    localStorage.setItem("puntajeFinal", `${respuestasCorrectas}/${totalPreguntas}`);
-    window.location.href = "resultado.html"; //redirige a resultados.html
-  }
+        elementoDePuntuacion.innerHTML = `
+            <h2>¡Tu Último Resultado!</h2>
+            <p>Tu puntuación de la última partida es: <b>${score}</b> aciertos de <b>10</b> preguntas.</p>
+        `;
+    } else {
+        elementoDePuntuacion.innerHTML = "<p>¡Juega un quiz para ver tu primera puntuación!</p>";
+    }
 }
 
-function actualizarContador() {
-  document.getElementById("question-counter").textContent =
-    `Pregunta ${preguntaActual} de ${totalPreguntas}`;
-;
-}
-actualizarContador();// Iniciar
+mostrarPuntuacionReciente(document.getElementById("result"));
+  
+/****************** Grafica ***********************/
+//funcion grafica
+// function paintGraph() {
+//   const graphContainer = document.querySelector('.result');
+//   const storedResults = JSON.parse(localStorage.getItem('resultadosQuiz'));
+
+//     if (!storedResults || storedResults.length === 0) {
+//       if(graphContainer){
+//         graphContainer.innerHTML = "<p>No hay datos disponibles aún.</p>";
+//       }
+//         return;
+//     }
+
+//     let date = [];
+//     let score = [];
+
+//     for (let items of storedResults) {
+//         date.push(new Date(items.date).toLocaleDateString("es-ES") + ' ' + new Date(items.date).toLocaleTimeString('es-Es'));
+//         score.push(items.score);
+//     }
+
+//     let data2 = {
+//         labels: date,
+//         series: [score],
+//     };
+
+//     let asisY = {
+//         onlyInteger: true
+
+//     }
+
+//     var options = {
+//         fullWidth: true,
+//         chartPadding: {
+//             right: 40
+//         }
+//     };
+
+//     if (graphContainer) {
+//       new Chartist.Line(".result", data2, asisY, options);
+//     } else {
+//       console.log('No hay contenedor para la grafica')
+//     }
+    
+// }
+
+// paintGraph();
+  
