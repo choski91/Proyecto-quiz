@@ -16,7 +16,12 @@ además agregar funcionalidad con JavaScript y practicar la asincronia.
 -Usar la estructura semantica de HTML5
 -Crear un diseño responsive adapatado a movil
 -Dar funcionalidad aplicando la lógica de JavaScript
--
+
+## 📸 Capturas de pantalla
+
+
+
+
 
 ## 🚀 Cómo ejecutar el proyecto
 
