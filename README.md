@@ -1,8 +1,8 @@
 README.md
-** Proyecto QUIZ **
+**Proyecto QUIZ**
 
 ```markdown
-#Proyecto QUIZ
+## Proyecto QUIZ
 Este proyecto consiste en crear una web de un juego de preguntas y respuestas, parecido al Kahoot, desarrollada como un ejercicio del bootcamp de desarrollo web full stack. 
 Los objetivos principales son la maquetación de cada pantalla con HTML5 y CSS3, aplicando buenas prácticas de estructura semántica, estilos responsive y organización de archivos, 
 además agregar funcionalidad con JavaScript y practicar la asincronia.
@@ -16,13 +16,18 @@ además agregar funcionalidad con JavaScript y practicar la asincronia.
 -Usar la estructura semantica de HTML5
 -Crear un diseño responsive adapatado a movil
 -Dar funcionalidad aplicando la lógica de JavaScript
--
+
+## 📸 Capturas de pantalla
+
+
+
+
 
 ## 🚀 Cómo ejecutar el proyecto
 
 1. Clonar repositorio de GitHub
 
-git clone [https://github.com/Migueljimnz08/Proyecto-quiz.git]
+git clone [https://github.com/choski91/Proyecto-quiz.git]
 
 2. Abrir el archivo `index.html` en el navegador
 
@@ -45,15 +50,13 @@ Puedes ver el proyecto online en:
 
 
 ## 📂 Estructura del proyecto
-```
-/pages - questions.html, results.html
-/css - hoja de estilos principal
+pages - questions.html, results.html
+css - hoja de estilos principal
 index.html - archivo principal
 README.md - documentación
 
-```
 ## 🧑‍💻 Autores
-- Nombres: Miguel Ángel Jiménez, Laura Smichowski, Fernando Burgos, María de Nazaret Melquiades
+- Nombres: Miguel Ángel Jiménez, Laura Smichowski, Fernán Burgos, María de Nazaret Melquiades
 ``` 
 
 
