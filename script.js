@@ -9,7 +9,7 @@ let resultado = {};
 const startButton = document.getElementById("start-button");
 if (startButton) {
     startButton.addEventListener("click", (event) => {
-        window.location.href = "../pages/question.html";
+        window.location.href = "../pages/question.html" || '/Proyecto-quiz/pages/question.html';
     })
 }
 
@@ -25,7 +25,7 @@ const buttonNext = document.getElementById("next");
 const playAgain = document.getElementById('playAgain');
 if (playAgain) {
     playAgain.addEventListener('click', function () {
-        window.location.href = './question.html';
+        window.location.href = './question.html' || '/Proyecto-quiz/pages/question.html';
     })
 }
 
@@ -124,8 +124,9 @@ function validacion(respuestaSeleccionada) {
     firstquest.innerHTML += `<h2>¡Incorrecto haber estudíao!</h2>`
   }
   pos_pregunta += 1;
-
-  if (buttonNext)
+}
+/***************Funcionalidad boton siguiente ****************/  
+if (buttonNext)
     buttonNext.addEventListener('click', () => {
 
       if(pos_pregunta < preguntas.length) {
@@ -137,20 +138,17 @@ function validacion(respuestaSeleccionada) {
       } else {
           buttonNext.innerText = 'Ver resultado';
           buttonNext.addEventListener("click", (event) => {
-          window.location.href = "../pages/results.html";
-          
-    })
-        // buttonNext.style.display = 'block';
-/**************** Guardar resultados ********************/        
+          console.log('resultado a guardar:', resultado)
+
+/**************** Guardar resultados ********************/           
+          resultadosGuardados.push(resultado);
+          resultado = {};
+          localStorage.setItem('resultadosQuiz', JSON.stringify(resultadosGuardados));
         
-        resultadosGuardados.push(resultado);
-        localStorage.setItem('resultadosQuiz', JSON.stringify(resultadosGuardados));
-        
-        resultado = {};
+          window.location.href = "../pages/results.html" || '/Proyecto-quiz/pages/results.html';
+      })
     }
   })
-  
-}
 
 /****************Mostrar resultados***************/
 function mostrarPuntuacionReciente(elementoDePuntuacion) {
@@ -165,7 +163,7 @@ function mostrarPuntuacionReciente(elementoDePuntuacion) {
     
 
     if (historial.length > 0) {
-        const ultimaPartida = historial[historial.length-20];
+        const ultimaPartida = historial[historial.length - 1];
         
   
         const score = ultimaPartida.score || 0;
@@ -183,50 +181,50 @@ function mostrarPuntuacionReciente(elementoDePuntuacion) {
 mostrarPuntuacionReciente(document.getElementById("result"));
   
 /****************** Grafica ***********************/
-//funcion grafica
-// function paintGraph() {
-//   const graphContainer = document.querySelector('.result');
-//   const storedResults = JSON.parse(localStorage.getItem('resultadosQuiz'));
+// function grafica
+function paintGraph() {
+  const graphContainer = document.querySelector('.result');
+  const storedResults = JSON.parse(localStorage.getItem('resultadosQuiz'));
 
-//     if (!storedResults || storedResults.length === 0) {
-//       if(graphContainer){
-//         graphContainer.innerHTML = "<p>No hay datos disponibles aún.</p>";
-//       }
-//         return;
-//     }
+    if (!storedResults || storedResults.length === 0) {
+      if(graphContainer){
+        graphContainer.innerHTML = "<p>No hay datos disponibles aún.</p>";
+      }
+        return;
+    }
 
-//     let date = [];
-//     let score = [];
+    let date = [];
+    let score = [];
 
-//     for (let items of storedResults) {
-//         date.push(new Date(items.date).toLocaleDateString("es-ES") + ' ' + new Date(items.date).toLocaleTimeString('es-Es'));
-//         score.push(items.score);
-//     }
+    for (let items of storedResults) {
+        date.push(new Date(items.date).toLocaleDateString("es-ES") + ' ' + new Date(items.date).toLocaleTimeString('es-Es'));
+        score.push(items.score);
+    }
 
-//     let data2 = {
-//         labels: date,
-//         series: [score],
-//     };
+    let data2 = {
+        labels: date,
+        series: [score],
+    };
 
-//     let asisY = {
-//         onlyInteger: true
+    let asisY = {
+        onlyInteger: true
 
-//     }
+    }
 
-//     var options = {
-//         fullWidth: true,
-//         chartPadding: {
-//             right: 40
-//         }
-//     };
+    var options = {
+        fullWidth: true,
+        chartPadding: {
+            right: 40
+        }
+    };
 
-//     if (graphContainer) {
-//       new Chartist.Line(".result", data2, asisY, options);
-//     } else {
-//       console.log('No hay contenedor para la grafica')
-//     }
+    if (graphContainer) {
+      new Chartist.Line(".result", data2, asisY, options);
+    } else {
+      console.log('No hay contenedor para la grafica')
+    }
     
-// }
+}
 
-// paintGraph();
+paintGraph();
   
