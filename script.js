@@ -9,7 +9,7 @@ let resultado = {};
 const startButton = document.getElementById("start-button");
 if (startButton) {
     startButton.addEventListener("click", (event) => {
-        window.location.href = "../pages/question.html";
+        window.location.href = "/Proyecto-quiz/pages/question.html";
     })
 }
 
@@ -25,7 +25,7 @@ const buttonNext = document.getElementById("next");
 const playAgain = document.getElementById('playAgain');
 if (playAgain) {
     playAgain.addEventListener('click', function () {
-        window.location.href = './question.html';
+        window.location.href = '/Proyecto-quiz/pages/question.html';
     })
 }
 
@@ -137,7 +137,7 @@ function validacion(respuestaSeleccionada) {
       } else {
           buttonNext.innerText = 'Ver resultado';
           buttonNext.addEventListener("click", (event) => {
-          window.location.href = "../pages/results.html";
+          window.location.href = "Proyecto-quiz/pages/results.html";
           
     })
         // buttonNext.style.display = 'block';
