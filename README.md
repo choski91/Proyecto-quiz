@@ -2,7 +2,7 @@ README.md
 ** Proyecto QUIZ **
 
 ```markdown
-##Proyecto QUIZ
+## Proyecto QUIZ
 Este proyecto consiste en crear una web de un juego de preguntas y respuestas, parecido al Kahoot, desarrollada como un ejercicio del bootcamp de desarrollo web full stack. 
 Los objetivos principales son la maquetación de cada pantalla con HTML5 y CSS3, aplicando buenas prácticas de estructura semántica, estilos responsive y organización de archivos, 
 además agregar funcionalidad con JavaScript y practicar la asincronia.
