@@ -9,7 +9,9 @@ let resultado = {};
 const startButton = document.getElementById("start-button");
 if (startButton) {
     startButton.addEventListener("click", (event) => {
+
         window.location.href = "../pages/question.html" || '/Proyecto-quiz/pages/question.html';
+
     })
 }
 
@@ -138,6 +140,7 @@ if (buttonNext)
       } else {
           buttonNext.innerText = 'Ver resultado';
           buttonNext.addEventListener("click", (event) => {
+
           console.log('resultado a guardar:', resultado)
 
 /**************** Guardar resultados ********************/           
