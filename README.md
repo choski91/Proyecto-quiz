@@ -22,7 +22,7 @@ además agregar funcionalidad con JavaScript y practicar la asincronia.
 
 1. Clonar repositorio de GitHub
 
-git clone [https://github.com/Migueljimnz08/Proyecto-quiz.git]
+git clone [https://github.com/choski91/Proyecto-quiz.git]
 
 2. Abrir el archivo `index.html` en el navegador
 
@@ -46,8 +46,8 @@ Puedes ver el proyecto online en:
 
 ## 📂 Estructura del proyecto
 ```
-/pages - questions.html, results.html
-/css - hoja de estilos principal
+pages - questions.html, results.html
+css - hoja de estilos principal
 index.html - archivo principal
 README.md - documentación
 
