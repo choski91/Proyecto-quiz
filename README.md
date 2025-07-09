@@ -1,5 +1,5 @@
 README.md
-** Proyecto QUIZ **
+**Proyecto QUIZ**
 
 ```markdown
 ## Proyecto QUIZ
@@ -45,14 +45,13 @@ Puedes ver el proyecto online en:
 
 
 ## 📂 Estructura del proyecto
-
 pages - questions.html, results.html
 css - hoja de estilos principal
 index.html - archivo principal
 README.md - documentación
 
 ## 🧑‍💻 Autores
-- Nombres: Miguel Ángel Jiménez, Laura Smichowski, Fernando Burgos, María de Nazaret Melquiades
+- Nombres: Miguel Ángel Jiménez, Laura Smichowski, Fernán Burgos, María de Nazaret Melquiades
 ``` 
 
 
