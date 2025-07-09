@@ -137,7 +137,7 @@ function validacion(respuestaSeleccionada) {
       } else {
           buttonNext.innerText = 'Ver resultado';
           buttonNext.addEventListener("click", (event) => {
-          window.location.href = "Proyecto-quiz/pages/results.html";
+          window.location.href = "/Proyecto-quiz/pages/results.html";
           
     })
         // buttonNext.style.display = 'block';
