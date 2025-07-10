@@ -76,7 +76,7 @@ body {
         text-overflow: unset;
 }
 
-.option:hover {background-color: var(--brilliant-rose);
+.option:hover {background-color: var(--prussian-blue);
         color: var(--white);
 }
 
@@ -88,7 +88,7 @@ body {
 }
 
 #next {
-       background-color: var(--rose);
+       background-color: var(--azure);
         border-radius: 50px;
         text-transform: uppercase;
         color: var(--white);
