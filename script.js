@@ -10,7 +10,7 @@ const startButton = document.getElementById("start-button");
 if (startButton) {
   startButton.addEventListener("click", (event) => {
 
-    window.location.href = "../pages/question.html" || '/Proyecto-quiz/pages/question.html';
+    window.location.href = "./pages/question.html" || '/Proyecto-quiz/pages/question.html';
 
   })
 }
@@ -148,7 +148,7 @@ if (buttonNext)
         resultado = {};
         localStorage.setItem('resultadosQuiz', JSON.stringify(resultadosGuardados));
 
-        window.location.href = "../pages/results.html" || '/Proyecto-quiz/pages/results.html';
+        window.location.href = "./results.html" || '/Proyecto-quiz/pages/results.html';
       })
     }
   })
