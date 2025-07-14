@@ -2,26 +2,19 @@
 
     --font-main: 'Comic Sans MS', cursive, sans-serif;
     --amber: #ffbe0bff;
-    --orange-pantone: #fb5607ff;
     --rose: #ff006eff;
     --blue-violet: #8338ecff;
     --azure: #3a86ffff;
     --prussian-blue: #003049ff;
-    --fire-engine-red: #d62828ff;
-    --orange-wheel: #f77f00ff;
-    --xanthous: #fcbf49ff;
-    --vanilla: #eae2b7ff;
-    --amethyst: #9b5de5ff;
     --brilliant-rose: #f15bb5ff;
-    --maize: #fee440ff;
-    --deep-sky-blue: #00bbf9ff;
-    --aquamarine: #00f5d4ff;
-
+    --white: #FFfFFF; 
 }
+
+/*-----ENCABEZADO Y TITULOS------*/
 
 header {
     background: var(--blue-violet);
-    color: white;
+    color: var(--white);
     padding: 12px 0 8px 0;
     border-bottom: 2px solid var(--rose);
     text-align: center;
@@ -29,87 +22,104 @@ header {
 }
 h1, h2, h3, h4 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: white;
+    color: var(--white);
     margin: 0.5em 0;
     text-align: center;
 }
 
+/*-------BODY-------*/
+
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background: var(--amber);
-    color: black;
+    color: var(--white);
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
+/*----------BOTONES---------*/
+
 #start-button {
-        background-color: var(--rose); /* Color de fondo */
-        border-radius: 20px; /* Curva en la esquina de los botones */
-        text-transform: uppercase; /* Mayusculas */
-        color:  white; /* Color del texto */
+        background-color: var(--rose);
+        border-radius: 50px;
+        text-transform: uppercase;
+        color: var(--white);
         width: 200px;
         height: 50px;
-        margin-left: 50%; 
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 0 0 5px 0;
         transition-duration: 0.4s;
+
 }
-#start-button:hover {background-color: var(--azure); /* Green */
-        color: white;
+#start-button:hover {background-color: var(--azure);
+        color: var(--white);
+}
+
+#opciones-rta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .option {
-        background-color: var(--azure); /* Color de fondo */
-        border-radius: 20px; /* Curva en la esquina de los botones */
-        text-transform: uppercase; /* Mayusculas */
-        color:  white; /* Color del texto */
+       background-color: var(--rose);
+        border-radius: 50px;
+        text-transform: uppercase;
+        color: var(--white);
         width: 200px;
         height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 5px;
-        margin-bottom: 5px;   
-        transition-duration: 0.4s; 
+        margin: 0 0 5px 0;
+        transition-duration: 0.4s;
+        white-space: normal;  /* estas 3 evitan que el texto desborde */
+        overflow-wrap: break-word;
+        text-overflow: unset;
 }
 
-.option:hover {background-color: var(--brilliant-rose); /* Green */
-        color: white;
+.option:hover {background-color: var(--brilliant-rose);
+        color: var(--white);
+}
+
+#siguiente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #next {
-        /* display: none; */
-        background-color: var(--rose); /* Color de fondo */
-        border-radius: 50px; /* Curva en la esquina de los botones */
-        text-transform: uppercase; /* Mayusculas */
-        color:  white; /* Color del texto */
+       background-color: var(--rose);
+        border-radius: 50px;
+        text-transform: uppercase;
+        color: var(--white);
         width: 200px;
         height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 0px;
-        margin-bottom: 5px;
+        margin: 0 0 5px 0;
         transition-duration: 0.4s;
 }
 
-#next:hover {background-color: var(--prussian-blue); /* Green */
-        color: white;
+#next:hover {background-color: var(--prussian-blue);
+        color: var(--white);
 }
 
-#playAgain {background-color: var(--rose); /* Color de fondo */
-        border-radius: 50px; /* Curva en la esquina de los botones */
-        text-transform: uppercase; /* Mayusculas */
-        color:  white; /* Color del texto */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playAgain {
+        background-color: var(--rose);
+        border-radius: 50px;
+        text-transform: uppercase;
+        color: var(--white);
         width: 200px;
         height: 50px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: 0px;
-        margin-bottom: 5px;
+        margin: 0 0 5px 0;
         transition-duration: 0.4s;
 }
 #playAgain:hover {background-color: var(--prussian-blue); /* Green */
-        color: white;
+        color: var(--white);
 }
 
 #question-counter {
@@ -118,9 +128,11 @@ body {
   text-align: center;
 }
 
+/*--------------FOOTER----------*/
+
 footer {
     background: var(--blue-violet);
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 1px 0;
     font-size: 0.80em;
@@ -132,7 +144,9 @@ footer {
     width: 100%;
 }
 
-@media screen and (max-width: 2000px) {
+/*-------------RESPONSIVE SCREEN-------------*/
+
+@media screen and (min-width: 1500px) {
     header {
         font-size: 3.5rem;
         padding: 10px 0;
@@ -146,26 +160,14 @@ footer {
         padding-bottom: 60px;
     }
 
-    #start-button  {
+    #start-button, .option, #next, #playAgain {
         font-size: 1.8rem;
         width: 300px;
         height: 70px;
-    }
-    .option {
-        font-size: 1.8rem;
-        width: 300px;
-        height: 70px;
-    }
-
-    #next {
-        font-size: 1.8rem;
-        width: 300px;
-        height: 70px;
-    }
-    
+    } 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     header {
         font-size: 2.5rem;
         padding: 10px 0;
@@ -179,24 +181,13 @@ footer {
         padding-bottom: 60px;
     }
 
-    #start-button  {
-        font-size: 1.2rem;
-        width: 250px;
-        height: 60px;
-    }
-    .option {
-        font-size: 1.2rem;
-        width: 250px;
-        height: 60px;
-    }
-
-        #next {
+    #start-button, .option, #next, #playAgain {
         font-size: 1.2rem;
         width: 250px;
         height: 60px;
     }
 }
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
     header {
         font-size: 1.8rem;
         padding: 10px 0;
@@ -210,18 +201,7 @@ footer {
         padding-bottom: 60px;
     }
 
-    #start-button  {
-        font-size: 1.0rem;
-        width: 200px;
-        height: 50px;
-    }
-    .option {
-        font-size: 1.0rem;
-        width: 200px;
-        height: 50px;
-    }
-
-    #next {
+    #start-button, .option, #next, #playAgain  {
         font-size: 1.0rem;
         width: 200px;
         height: 50px;
