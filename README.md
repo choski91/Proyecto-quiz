@@ -1,40 +1,34 @@
-README.md
-**Proyecto QUIZ**
-
-```markdown
 ## Proyecto QUIZ
 Este proyecto consiste en crear una web de un juego de preguntas y respuestas, parecido al Kahoot, desarrollada como un ejercicio del bootcamp de desarrollo web full stack. 
 Los objetivos principales son la maquetación de cada pantalla con HTML5 y CSS3, aplicando buenas prácticas de estructura semántica, estilos responsive y organización de archivos, 
 además agregar funcionalidad con JavaScript y practicar la asincronia.
 
-##Tecnologías usadas
--HTML5
--CSS3
--JavaScript
+## Tecnologías usadas
+- HTML5
+- CSS3
+- JavaScript
 
 ## 🎯 Objetivo del proyecto
--Usar la estructura semantica de HTML5
--Crear un diseño responsive adapatado a movil
--Dar funcionalidad aplicando la lógica de JavaScript
+- Usar la estructura semantica de HTML5
+- Crear un diseño responsive adapatado a movil
+- Dar funcionalidad aplicando la lógica de JavaScript
 
 ## 📸 Capturas de pantalla
-
-
-
-
+![Vista ordenador](assets/Print%20pregunta%20Quiz.png)
+![Vista móvil](assets/Proyecto_quiz_graf.png)
 
 ## 🚀 Cómo ejecutar el proyecto
 
 1. Clonar repositorio de GitHub
 
-git clone [https://github.com/choski91/Proyecto-quiz.git]
+git clone https://github.com/choski91/Proyecto-quiz.git
 
 2. Abrir el archivo `index.html` en el navegador
 
 ### 🌐 Proyecto desplegado
 Puedes ver el proyecto online en:
 
-[https://nazaretmelquiades.github.io/Proyecto-quiz/]
+https://nazaretmelquiades.github.io/Proyecto-quiz/
 
 ## 📚 Lecciones aprendidas
 - Hay que planificar de forma eficiente las tareas
@@ -48,16 +42,16 @@ Puedes ver el proyecto online en:
 - Jugar mas de una partida
 - Guardar preguntas y resultados en FireStore
 
-
 ## 📂 Estructura del proyecto
-pages - questions.html, results.html
-css - hoja de estilos principal
-index.html - archivo principal
-README.md - documentación
+- pages - questions.html, results.html
+- css - hoja de estilos principal
+- index.html - archivo principal
+- script.js - código funcionalidad
+- README.md - documentación
 
 ## 🧑‍💻 Autores
 - Nombres: Miguel Ángel Jiménez, Laura Smichowski, Fernán Burgos, María de Nazaret Melquiades
-``` 
+
 
 
 
