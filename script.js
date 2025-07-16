@@ -31,6 +31,14 @@ if (playAgain) {
   })
 }
 
+ /************** Botón home *************/
+const home = document.getElementById('home');
+if (home) {
+    home.addEventListener('click', function () {
+        window.location.href = '../index.html' || '/Proyecto-quiz/index.html';
+    })
+}
+
 /***************** Render primera pregunta ***************/
 const firstquest = document.getElementById('opciones-rta');
 if (firstquest) {
@@ -47,24 +55,26 @@ if (firstquest) {
 
 /***************** obtencion de datos ***************/
 async function getData() {
-  try {
-    //   const res = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
-    const res = await fetch('../datos.json');
 
-    if (!res.ok) {
-      if (res.status === 404) {
-        throw new Error("Recurso no encontrado (404)");
-      } else if (res.status === 500) {
-        throw new Error("Error en el servidor (500)");
-      } else {
-        throw new Error(`Error HTTP: ${res.status}`);
-      }
-    }
-    const data = await res.json();
-    let datosFinal = manipuDatos(data.results);
-    return datosFinal;
+    try{
+        const res = await fetch('https://opentdb.com/api.php?amount=10&type=multiple');
+        //const res = await fetch('../datos.json');
 
-  } catch (error) {
+        if (!res.ok) {
+            if (res.status === 404) {
+                throw new Error("Recurso no encontrado (404)");
+            } else if (res.status === 500) {
+                throw new Error("Error en el servidor (500)");
+            } else {
+                throw new Error(`Error HTTP: ${res.status}`);
+            }
+        }
+      const data = await res.json();
+      let datosFinal = manipuDatos(data.results);
+      return datosFinal;
+      
+    }catch (error) {
+  
     if (error.message.includes("404")) {
       console.error("Error: No se encontró el recurso solicitado.");
     } else if (error.message.includes("500")) {
@@ -91,7 +101,6 @@ function manipuDatos(dataset) {
 
 /****************** Render Preguntas *******************/
 function renderPregunta(i, container) {
-  console.log(preguntas);
 
   container.innerHTML = `
   <h2>${preguntas[i].pregunta}</h2>
@@ -122,55 +131,54 @@ function validacion(respuestaSeleccionada) {
     console.log('¡Correcto!');
     firstquest.innerHTML += `<h2>¡Correcto!</h2>`
   } else {
-    console.log('Incorrecto haber estudíao');
-    firstquest.innerHTML += `<h2>¡Incorrecto haber estudíao!</h2>`
+    console.log(`Incorrecto haber estudíao`);
+    firstquest.innerHTML += `<h2>¡Incorrecto haber estudíao! la respuesta correcta es ${correctaNormalizada}</h2>`
   }
-  pos_pregunta += 1;
+
+    pos_pregunta += 1;
+  
 }
 /***************Funcionalidad boton siguiente ****************/
 if (buttonNext)
   buttonNext.addEventListener('click', () => {
 
-    if (pos_pregunta < preguntas.length) {
+      if(pos_pregunta <= preguntas.length -1) {
+          
+       let counterQuestions = document.getElementById("question-counter");
+       counterQuestions.innerHTML= `<h3>Pregunta ${pos_pregunta + 1 } de 10 </h3> `
 
-      let counterQuestions = document.getElementById("question-counter");
-      counterQuestions.innerHTML = `<h3>Pregunta ${pos_pregunta + 1} de 10 </h3> `
-
-      renderPregunta(pos_pregunta, firstquest);
-    } else {
-      buttonNext.innerText = 'Ver resultado';
-      buttonNext.addEventListener("click", (event) => {
-
+        renderPregunta(pos_pregunta, firstquest);
+      } else {
+        buttonNext.innerText = 'Ver resultado';
         console.log('resultado a guardar:', resultado)
 
-        /**************** Guardar resultados ********************/
+/**************** Guardar resultados ********************/           
+
         resultadosGuardados.push(resultado);
         resultado = {};
         localStorage.setItem('resultadosQuiz', JSON.stringify(resultadosGuardados));
 
+
         window.location.href = "./results.html" || '/Proyecto-quiz/pages/results.html';
       })
+
     }
   })
 
+
 /****************Mostrar resultados***************/
+const contenedorResultado = document.getElementById("result");
+
+
 function mostrarPuntuacionReciente(elementoDePuntuacion) {
 
-  if (!elementoDePuntuacion) {
-    console.error("Error: El elemento con ID 'result' no se encontró en el DOM para mostrar la puntuación.");
-    return;
-  }
-
-  const historial = JSON.parse(localStorage.getItem('resultadosQuiz')) || [];
-  console.log(historial);
-
-
-  if (historial.length > 0) {
-    const ultimaPartida = historial[historial.length - 1];
-
-
-    const score = ultimaPartida.score || 0;
-
+    const historial = JSON.parse(localStorage.getItem('resultadosQuiz')) || [];
+    
+    if (historial.length > 0) {
+        const ultimaPartida = historial[historial.length - 1];
+        
+  
+        const score = ultimaPartida.score || 0;
 
     elementoDePuntuacion.innerHTML = `
             <h2>¡Tu Último Resultado!</h2>
@@ -180,9 +188,12 @@ function mostrarPuntuacionReciente(elementoDePuntuacion) {
     elementoDePuntuacion.innerHTML = "<p>¡Juega un quiz para ver tu primera puntuación!</p>";
   }
 }
-
-mostrarPuntuacionReciente(document.getElementById("result"));
-
+if (contenedorResultado){
+  mostrarPuntuacionReciente(contenedorResultado);
+} else {
+  console.log('Todavia no puedes ver los resultados')
+}
+  
 /****************** Grafica ***********************/
 // function grafica
 function paintGraph() {
