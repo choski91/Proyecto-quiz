@@ -117,11 +117,32 @@ nav {
         height: 50px;
         margin: 0 0 5px 0;
         transition-duration: 0.4s;
+        
 }
 #playAgain:hover {background-color: var(--prussian-blue); /* Green */
         color: var(--white);
 }
 
+#home {
+        background-color: var(--rose);
+        border-radius: 50px;
+        text-transform: uppercase;
+        color: var(--white);
+        width: 200px;
+        height: 50px;
+        margin: 0 0 5px 0;
+        transition-duration: 0.4s;
+}
+#home:hover {background-color: var(--prussian-blue); /* Green */
+        color: var(--white);
+}
+
+#routes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 #question-counter {
   margin-bottom: 10px;
   font-weight: bold;
@@ -160,7 +181,7 @@ footer {
         padding-bottom: 60px;
     }
 
-    #start-button, .option, #next, #playAgain {
+    #start-button, .option, #next, #playAgain, #home {
         font-size: 1.8rem;
         width: 300px;
         height: 70px;
@@ -181,7 +202,7 @@ footer {
         padding-bottom: 60px;
     }
 
-    #start-button, .option, #next, #playAgain {
+    #start-button, .option, #next, #playAgain, #home {
         font-size: 1.2rem;
         width: 250px;
         height: 60px;
@@ -201,7 +222,7 @@ footer {
         padding-bottom: 60px;
     }
 
-    #start-button, .option, #next, #playAgain  {
+    #start-button, .option, #next, #playAgain, #home {
         font-size: 1.0rem;
         width: 200px;
         height: 50px;
